@@ -111,10 +111,12 @@ a {
 .faq {
     width: 100%;
     height: 100%;
-    background: url(https://m.media-amazon.com/images/I/91YB1z3sH7L._AC_UF894,1000_QL80_.jpg) no-repeat center / cover; 
+    background: url(https://www.thesun.co.uk/wp-content/uploads/2023/12/RB-TRANSFER-TOPIC-BANNER-750X352-2.jpg?strip=all&w=750&h=352&crop=1) no-repeat center / cover; 
+    opacity: 0.9;
 }
 .faq-title {
     text-align: center;
+    color: white;
 }
 .football-que{
     max-width: 600px;
