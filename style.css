@@ -1,0 +1,152 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: white;
+    background-color:black;
+}
+
+a {
+    text-decoration: none;
+    color: #007bff;
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    max-height: 100vh;
+    overflow: hidden;
+}
+
+.hero-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(70%);
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.hero-content, .text{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    text-align: center;
+}
+
+.title {
+    font-size: 2.5em;
+    margin: 0;
+}
+
+.subtitle {
+    font-size: 1.2em;
+}
+
+.button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Content Section */
+.content {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.content-item {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+.text{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 2;
+    width: 100%;
+    transform: translate(-50%, -50%);
+    color:black;
+    text-align: center;
+}
+
+.text h2 {
+    margin-top: 0;
+    font-size: 2.5em;
+    color: white;
+}
+.text p{
+    font-size: 1.5rem;
+    line-height: 1.5;
+    margin:10px 0;
+    color: white;
+}
+
+.image {
+    width: 100%;
+    height: auto;
+    z-index: 1;
+}
+
+/* quen/ens Section */
+.faq {
+    width: 100%;
+    height: 100%;
+    background: url(https://m.media-amazon.com/images/I/91YB1z3sH7L._AC_UF894,1000_QL80_.jpg) no-repeat center / cover; 
+}
+.faq-title {
+    text-align: center;
+}
+.football-que{
+    max-width: 600px;
+    width: 90%;
+    margin: 0 auto;
+    text-align: left;
+
+  }
+.accordion-item{
+    background: #333;
+    padding: 20px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+   }
+   .accordion-item h3{
+    margin: 0;
+    font-size: 1.5rem;
+   }
+   .accordion-item .accordion-content{
+    margin-top: 10px;
+    font-size: 1rem;
+    color: #bbb;
+   }
+
+/* Footer */
+footer {
+    background-color: #343a40;
+    color: #fff;
+    padding: 10px 0;
+}
+
+.footer{
+    text-align: center;
+}
