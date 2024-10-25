@@ -1,0 +1,224 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: black;
+    color: white;
+}
+/* nav */
+.navbar{
+    display: flex;
+    position: fixed;
+    width: 100%;
+    height: 4.5rem;
+    top: 0;
+    right: 0;
+    color: white;
+    background-color:rgba(0, 0, 0, 0.4);
+    justify-content: space-between;
+    align-items: center;
+}
+.brand-title{
+    font-size: 1.8rem;
+    line-height: 60px;
+}
+.navbar-links{
+    height: 100%;
+}
+
+.navbar-links ul{
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.navbar-links li{
+    padding: 20px
+}
+.navbar-links a{
+    color: white;
+    text-decoration: none;
+    font-size: 1.5em;
+    line-height: 60px;
+    display: block;
+}
+.navbar-links a:hover{
+    background-color: #444;
+}
+.toggle-button{
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+}
+.toggle-button .bar{
+    height: 3px;
+    width: 100%;
+    background-color: white;
+    border-radius: 8px; 
+}
+
+
+.hero{
+    background: url(https://img.allfootballapp.com/www/M00/58/8F/720x-/-/-/CgAGVmcXpseAKsbdAAEv4vhzkzo017.jpg.webp) no-repeat center / cover;
+    width: 100%;
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    color: white;
+    z-index: 1000;
+}
+.hero a{
+    text-decoration: none;
+    padding: 10px;
+    margin-top: 40px;
+    color:azure;
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+.hero a:hover{
+    color: aqua;
+}
+.hero h1{
+    font-size: 2.5rem;
+    font-weight: 600;
+}
+.last-news ,.transfer,.trending{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+}
+/* last news and tredading*/
+.newslast,.trendlast{
+    display: flex;
+    max-width: calc(50% - 20px);
+    width: 100%;
+    padding: 20px;
+    border: 1px solid #444;
+    border-radius: 10px;
+    margin-inline: 10px;
+    gap: 10px;
+}
+.last-news1,.trin-news{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+    
+}
+.newslast img,.trendlast img{
+    width: 150px;
+    height:90px;
+    object-fit: cover;
+}
+.newslast h1,.trendlast h1{
+    flex: 1;
+    font-size: 1.2rem;
+}
+/* transfer */
+.transfer {
+    display: flex;
+    width: 100%;
+    padding: 40px;
+    border-bottom: 1px solid #444;
+    margin-bottom: 10px;
+    gap: 10px;
+}
+.trean-news{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
+    gap: 10px;
+}
+.transLast{
+    max-width:350px;
+    width: 100%;
+    max-height: 400px;
+    display: flex;
+    flex-direction: column;
+}
+.transLast img{
+    width: 100%;
+    height:200px;
+    object-fit: cover;
+}
+.transLast h1{
+    font-size: 1.2rem;
+}
+h2{
+    margin-left: 25px;
+}
+
+
+@media (max-width: 1024px) {
+    .transfer {
+        flex: 1 0 calc(50% - 20px);
+    }
+}
+
+@media(max-width:768px){
+    .navbar{        
+        flex-direction: column;
+        justify-content: flex-start;
+        }
+    .toggle-button{
+        display: flex;
+        }
+            
+    .navbar-links {
+            width: 100%;
+            max-height: 0;
+            overflow: hidden;
+            opacity: 0;
+            transition: max-hight 0.5s ease-out, opacity 0.5s ease-out;
+    }
+     .navbar-links ul{
+            flex-direction: column;
+            width: 100%;
+    }
+            
+    .navbar-links li{
+            text-align: center;
+    } 
+    .navbar-links a{
+            padding: 10px;
+            line-height: 20px;
+     }
+    .navbar.active .navbar-links{
+            max-height: 400px;
+            opacity: 1;
+            transition: max-hight 0.5s ease-in-out, opacity 0.5s ease-in-out;
+     }
+    .navbar.active .toggle-button .bar:nth-child(2){
+        opacity: 0;
+    }
+    .navbar.active .toggle-button .bar:nth-child(1){
+        transform: translateY(9px) rotate(45deg);
+    }
+    .navbar.active .toggle-button .bar:nth-child(3){
+        transform: translateY(-9px) rotate(-45deg);
+     }   
+    .last-news,trin-news{
+        height: auto;
+    }
+    .newslast,.trendlast {
+        width: 100%;
+        max-width: 100%;
+
+    }
+    .transfer {
+        flex: 1 1 calc(100% - 20px);
+    }h2{
+        margin-left: 35px;
+    }
+}

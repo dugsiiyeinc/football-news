@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Details</title>
+    <style>
+        body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+.details {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+#detail-title {
+    font-size: 2em;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+#detail-img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+#detail-prag {
+    font-size: 1.2em;
+    line-height: 1.6;
+    color: #555;
+    margin-top: 15px;
+}
+    </style>
+</head>
+<body>
+    <div class="details">
+        <h1 id="detail-title"></h1>
+        <img id="detail-img" src="" alt="Detail Image">
+        <p id="detail-prag"></p>
+    </div>
+
+    <script>
+        function getQueryParams() {
+            const params = new URLSearchParams(window.location.search);
+            return {
+                type: params.get('type'),
+                title: params.get('title'),
+                src: params.get('src'),
+                prag: params.get('prag')
+            };
+        }
+
+        const { type, title, src, prag } = getQueryParams();
+        
+        const detailTitle = document.getElementById('detail-title');
+        const detailImg = document.getElementById('detail-img');
+        const detailPrag = document.getElementById('detail-prag');
+
+        detailTitle.textContent = decodeURIComponent(title)
+        detailImg.src = decodeURIComponent(src)
+        detailPrag.textContent = decodeURIComponent(prag) 
+    </script>
+</body>
+</html>
