@@ -5,7 +5,7 @@ nav.classList.toggle('active')
 })
 async function getfech(){
     try {
-    const response=await fetch('headline.JSON')
+    const response=await fetch('/headline.JSON')
     if(!response.ok){
         throw new Error('data is failed')
     }
