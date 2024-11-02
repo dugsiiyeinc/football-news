@@ -178,7 +178,7 @@ body{
 }
 .news-official img{
     width: 150px;
-    height:90px;
+    max-height:150px;
     object-fit: cover;
 }
 .news-official h1{
