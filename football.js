@@ -3,14 +3,14 @@ const nav=document.querySelector('.navbar')
 toggleButton.addEventListener("click", function(){
 nav.classList.toggle('active')
 })
-await getfech()
+getfech()
 async function getfech(){
     try {
-    const response=await fetch('/headline.JSON')
+    const response = await fetch('/headline.JSON')
     if(!response.ok){
         throw new Error('data is failed')
     }
-    const result=await response.json()
+    const result = await response.json()
     matchesData = result.lastWeekMatch;
     lastmatches(matchesData[indexLast])
     officialNews(result.oficial)
@@ -18,7 +18,7 @@ async function getfech(){
     upcomingDta=result.upcoming
     upcomingMatches(upcomingDta[indexUpcoming])
     } catch (error) {
-        
+        console.log('error at fetch news ',error)
     }    
 }
 let indexLast=0
