@@ -9,7 +9,7 @@ const lastNews=[
     {title:' Dominik Szoboszlai has a point to prove as Liverpool star makes special return',
         src:'https://img.allfootballapp.com/www/M00/57/84/720x-/-/-/CgAGVmcHC7CAewxgAABavKUDjrc579.jpg.webp',prag:'The Hungary captain arrived on Merseyside just over 12 months ago in a deal worth £60m as one of Jurgen Klopps final signings. There was excitement about his early performances and the No.8 on his back brought over-eager comparisons with the once wearer of the number in Steven Gerrard'},
     {title:'Randal Kolo Muani back in PSG squad ahead of Champions League clash',src:'https://img.allfootballapp.com/www/M00/50/63/720x-/-/-/CgAGVWZhmNiAYkjSAACsulrs1Lk558.jpg.webp',prag:'The France international had been left out of PSG’s squad for last weekend’s victory at home against RC Strasbourg Alsace (4-2) after he picked up an ankle injury during a training session on Friday the 18th of October.'},
-    {title:'Flick excited by Bayern reunion but feels at home at Barcelona',src:'https://img.allfootballapp.com/www/M00/58/90/CgAGVmcXsVSAYVv3AAJ1GR-T_vg462.jpg.webp',prag:'https://img.allfootballapp.com/www/M00/58/90/CgAGVmcXsVSAYVv3AAJ1GR-T_vg462.jpg.webp'},
+    {title:'Flick excited by Bayern reunion but feels at home at Barcelona',src:'https://img.allfootballapp.com/www/M00/58/90/CgAGVmcXsVSAYVv3AAJ1GR-T_vg462.jpg.webp',prag:'The France international had been left out of PSG’s squad for last weekend’s victory at home against RC Strasbourg Alsace (4-2) after he picked up an ankle injury during a training session on Friday the 18th of October.However, Kolo Muani will be included tonight albeit it is not expected that the forward will start against the Eredivisie league leaders. The striker has struggled to stake a starting spot in Luis Enrique’s plans since he made the move to the capital club at the start of the 2023/24 campaign.'},
     {title:'Returning De Bruyne will not be rushed back, says Guardiola',src:'https://img.allfootballapp.com/www/M00/54/C0/720x-/-/-/CgAGVWbxmmWAbKp4ADJRAvt17q8134.jpg.webp',prag:'Manchester Citys Kevin de Bruyne will be eased back into action after being sidelined by a muscle injury, with Pep Guardiola describing him as a doubt for Wednesdays Champions League clash with Sparta Prague.'},
     {title:'Simeone: Courtois and myself have different views, but I’m grateful to him',src:'https://img.allfootballapp.com/www/M00/58/8F/720x-/-/-/CgAGVWcXqkuANrKRAAJsXH0FHMk597.jpg.webp',prag:'Atletico Madrid manager Diego Simeone has not backed away from his comments in the aftermath of the Madrid derby, following Thibaut Courtois’ response. Simeone said that while nothing justified the objects thrown at the Real Madrid goalkeeper, Courtois could have been more intelligent to avoid provoking the fans.'},
     {title:'Jose Maria Gimenez against La Liga plans to host Barcelona-Atletico in USA',src:'https://img.allfootballapp.com/www/M00/58/8F/720x-/-/-/CgAGVWcXpseAC0oDAAHtPVSS06A260.jpg.webp',prag:'Atletico Madrid defender Jose Maria Gimenez has criticised plans to hold their December clash with Barcelona in the USA. Los Rojiblancos are scheduled to face Barcelona on the 21st or 22nd of December at Montjuic, but the Uruguayan feels they should keep La Liga matches in Spain.'},
@@ -42,7 +42,7 @@ async function getFetch(){
         transfer(data.transfer)
         trending(data.trending)
     } catch (error) {
-        
+        console.error(error);
     }
 }
 getFetch()

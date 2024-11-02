@@ -5,39 +5,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Details</title>
     <style>
-        body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-}
+             body {
+                margin: 0;
+                font-family: Arial, sans-serif;
+                 background-color: #f4f4f4;
+             }
 
-.details {
-    max-width: 800px;
-    margin: 20px auto;
-    padding: 20px;
-    background-color: #fff;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-}
-
-#detail-title {
-    font-size: 2em;
-    margin-bottom: 15px;
-    color: #333;
-}
-
-#detail-img {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
-}
-
-#detail-prag {
-    font-size: 1.2em;
-    line-height: 1.6;
-    color: #555;
-    margin-top: 15px;
-}
+             .details, .detail2 {
+                max-width: 800px;
+                margin: 20px auto;
+                padding: 20px;
+                background-color: #fff;
+                box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+                border-radius: 8px;
+             }
+             #detail-title, #video-title {
+                font-size: 2em;
+                margin-bottom: 15px;
+                color: #333;
+             }
+             #detail-title {
+               font-size: 2em;
+               margin-bottom: 15px;
+               color: #333;
+             }#detail-img {
+                width: 100%;
+                height: auto;
+                border-radius: 8px;
+             }
+             #detail-prag {
+                font-size: 1.2em;
+                line-height: 1.6;
+                color: #555;
+               margin-top: 15px;
+             }
+             #video {
+            width: 100%;
+            height: 300px;
+            border-radius: 8px;
+            margin-top: 15px;
+        }
     </style>
 </head>
 <body>
@@ -45,6 +52,10 @@
         <h1 id="detail-title"></h1>
         <img id="detail-img" src="" alt="Detail Image">
         <p id="detail-prag"></p>
+    </div>
+    <div class="detail2">
+        <h1 id="video-title"></h1>
+        <video id="video" src="" controls></video>
     </div>
 
     <script>
@@ -54,19 +65,31 @@
                 type: params.get('type'),
                 title: params.get('title'),
                 src: params.get('src'),
-                prag: params.get('prag')
+                prag: params.get('prag'),
+                video:params.get('video'),
+                text:params.get('text')
             };
         }
 
-        const { type, title, src, prag } = getQueryParams();
+        const { type, title, src, prag,video,text} = getQueryParams();
         
         const detailTitle = document.getElementById('detail-title');
         const detailImg = document.getElementById('detail-img');
         const detailPrag = document.getElementById('detail-prag');
-
-        detailTitle.textContent = decodeURIComponent(title)
-        detailImg.src = decodeURIComponent(src)
-        detailPrag.textContent = decodeURIComponent(prag) 
+        const detailVideo = document.getElementById('video');
+        const videoTitle = document.getElementById('video-title');
+        const detailsSection = document.querySelector('.details')
+        const videoSection = document.querySelector('.detail2');
+        if(type==='video'){
+            detailsSection.style.display='none'
+            detailVideo.src=decodeURIComponent(video)
+            videoTitle.textContent=decodeURIComponent(text)
+        }else{
+            videoSection.style.display='none'
+            detailTitle.textContent = decodeURIComponent(title)
+            detailImg.src = decodeURIComponent(src)
+            detailPrag.textContent = decodeURIComponent(prag) 
+        }
     </script>
 </body>
 </html>
