@@ -3,6 +3,7 @@ const nav=document.querySelector('.navbar')
 toggleButton.addEventListener("click", function(){
 nav.classList.toggle('active')
 })
+await getfech()
 async function getfech(){
     try {
     const response=await fetch('/headline.JSON')
@@ -111,4 +112,3 @@ document.getElementById('next2').addEventListener('click',()=>{
         upcomingMatches(upcomingDta[indexUpcoming])
     }, 300);
 })
-getfech()
