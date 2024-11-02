@@ -344,7 +344,7 @@ footer {
 }
 @media(max-width:400px){
     .news-official h1{
-        font-size: 0.8rem;
+        font-size: 0.7rem;
     }
     .upcoming p{
         font-size: 0.5rem;
