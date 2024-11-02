@@ -232,3 +232,8 @@ footer {
         margin-left: 35px;
     }
 }
+@media (max-width:400px){
+    .newslast h1,.trendlast h1{
+        font-size: 0.75rem;
+    }
+}

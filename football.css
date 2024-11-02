@@ -212,7 +212,7 @@ body{
     display: flex;
     flex-direction: column;
     padding: 10px 20px;
-    box-shadow: 2px 5px 5px rgba(0, 0, 0, 0.5);
+    box-shadow: 2px 4px 8px rgba(255, 255, 255, 0.15);
 }
 .vidoes-news img{
     width: 100%;
@@ -340,5 +340,13 @@ footer {
     }
     .vidoes-news{
         max-width: calc((100% - 20px));
+    }
+}
+@media(max-width:400px){
+    .news-official h1{
+        font-size: 0.8rem;
+    }
+    .upcoming p{
+        font-size: 0.5rem;
     }
 }

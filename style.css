@@ -159,4 +159,10 @@ footer {
 .text p {
     font-size: 1rem;
 }
+.title{
+    font-size: 1.2rem;
+}
+.subtitle{
+    font-size: 1rem;
+}
 }
