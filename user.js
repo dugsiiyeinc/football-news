@@ -66,7 +66,7 @@ function switchOutForm() {
         confirmPassword.style.display = 'none';
         email.value = "";
         password.value = "";
-        authSwitch.innerHTML =` Already have an account? <a href="#" id="switchForm">Sign In</a>;`
+        authSwitch.innerHTML =`Don't have an account? <a href="#" id="switchForm">Sign Up</a> ;`
     } else {
         authButton.textContent = 'Sign Up';
         formTitle.textContent = 'Sign Up';
@@ -76,6 +76,6 @@ function switchOutForm() {
         confirmPassword.value = "";
         email.value = "";
         password.value = "";
-        authSwitch.innerHTML = `Don't have an account? <a href="#" id="switchForm">Sign Up</a>;`
+        authSwitch.innerHTML = `Already have an account? <a href="#" id="switchForm">Sign In</a>;`
     }
 }
